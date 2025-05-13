@@ -5,6 +5,7 @@ import RegisterPage from "./pages/registerPage";
 import LoginPage from "./pages/loginPage";
 import TasksPage from "./pages/TasksPage";
 import TaskFormPage from "./pages/TaskFormPage";
+import TasksUserPage from "./pages/TasksUserPage";
 import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/homePage";
 import ProtectedRoute from "./ProtectedRoute";
@@ -26,7 +27,7 @@ function App() {
             <Route element={<ProtectedRoute/>}>
               <Route path="/tasks" element={<TasksPage/>}></Route>
               <Route path="/add-task" element={<TaskFormPage/>}></Route>
-              <Route path="/task/:id" element={<TaskFormPage/>}></Route>
+              <Route path="/tasks/user/:id" element={<TasksUserPage/>}></Route>
               <Route path="/profile" element={<ProfilePage/>}></Route>
             </Route>
           </Routes>

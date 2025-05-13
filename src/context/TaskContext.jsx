@@ -31,8 +31,12 @@ export function TaskProvider({ children }) {
     const getTasksByUSer = async (id) =>{
        try {
         const res = await getTasksUserRequest(id);
+        console.log(res);
         setTasks(res.data)
        } catch (error) {
+            if(error.status === 400){
+                return error.message
+            }
             console.log(error);
        }
        

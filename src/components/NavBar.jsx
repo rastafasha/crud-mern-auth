@@ -13,8 +13,15 @@ function NavBar() {
             {isAuthenticated ? (
                  <>
                     <li>
+                        <Link to={`/tasks/user/${user.id}`}
+                        >Welcome {user.username}
+                        
+                        </Link>
+                        
+                    </li>
+                    <li>
                         <Link to='/tasks'
-                        >Welcome {user.username}</Link>
+                        >All Tasks</Link>
                         
                     </li>
                     <li>
